@@ -6,8 +6,8 @@ var direction = Vector2(0,0)
 var a = 0
 
 # This function is called from the Ships script.
-func setDirection(dir):
-	direction = dir
+func setDirection(direction):
+	self.direction = direction
 
 func _process(delta):
 	# Make the glowsprite modulate the alpha (opacity) property to make it "blink" a little.
