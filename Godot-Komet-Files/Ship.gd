@@ -1,14 +1,21 @@
 extends Node2D
 
+# Constant (a value that does not change) for the function lerp_angle used in this script.
+const ShipRotationSmoothness = 0.075
+
 # So we later can instance a bullet.
 onready var _bullet = preload("res://Bullet.tscn")
+
+var oldAngle = 0
 
 func _process(delta):
 	# Get the angle from the mouse pointer used for rotate the ships sprite towards it
 	var angle = get_angle_to(get_global_mouse_position())
-	# Get the direction Vector2 from The ship and mouse pointer so we let the bullet travel this patch
+	# Get the direction Vector2 from The ship and mouse pointer so we let the bullet travel this path
 	var theDirection = ( get_global_mouse_position() - self.position ).normalized()
-	$Sprite.rotation = angle
+	var toRot = lerp_angle(oldAngle,angle,ShipRotationSmoothness) # Smooth out mouse movement using interpolation function lerp_angle (https://docs.godotengine.org/en/3.2/classes/class_@gdscript.html#class-gdscript-method-lerp-angle)
+	oldAngle = toRot
+	$Sprite.rotation = toRot
 	if Input.is_action_just_pressed("click"):
 		# If we click the mousebutton we instantiate a new bullet
 		var b = _bullet.instance()
