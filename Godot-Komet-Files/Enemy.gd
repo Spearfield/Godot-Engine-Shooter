@@ -2,7 +2,7 @@ extends Area2D
 
 const EnemyStrength = 10 # Number of hits required to kill it.
 const SpeedOfEnemy = 0.01
-var health = EnemyStrength # This will be counted down foe each hit.
+var health = EnemyStrength # This will be counted down for each hit.
 var a = 0
 var rng = RandomNumberGenerator.new()
 
