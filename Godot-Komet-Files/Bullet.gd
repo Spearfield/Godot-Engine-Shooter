@@ -18,4 +18,4 @@ func _process(delta):
 	# Check if the bullet is outside the screen, then kill it.
 	if not get_node("VisibilityNotifier2D").is_on_screen():
 		print("Bullet exited screen")
-		queue_free() # Destroy the bullet and remove it fmemory.
+		queue_free() # Destroy the bullet and remove it from memory.

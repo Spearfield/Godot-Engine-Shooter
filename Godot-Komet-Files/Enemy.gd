@@ -7,11 +7,11 @@ var rng = RandomNumberGenerator.new()
 
 func _ready():
 	health = EnemyStrength
-	rng.randomize()
-	a = rng.randf_range(0,100) # Make wwhere in the cycle of the going up and down random.
+	rng.randomize() # Randomize so we don't get the same random number every time we start the game.
+	a = rng.randf_range(0,100) # Randomize where in the cycle of the going up and down.
 	
 func _process(delta):
-	# A nice sine wave makes the enemy ship go up and down
+	# A sine wave makes the enemy ship go up and down
 	position.y += sin(a) * 0.5
 	a += 0.01
 	pass
@@ -25,4 +25,4 @@ func _on_Enemy_area_entered(area):
 	health -= 1
 	# And kill the enemy if it reaches 0 or below.
 	if health <= 0:
-		queue_free()
+		queue_free() # Remove the enemy from memory.
