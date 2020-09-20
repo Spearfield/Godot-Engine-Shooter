@@ -1,6 +1,6 @@
 # Godot-Engine---Shooter
 A project I made for beginners to discover a few basic things about the fantastic Game Engine Godot.
-![Screenshot](https://raw.githubusercontent.com/Spearfield/Godot-Engine---Shooter/master/Komet.png)
+![Screenshot](https://raw.githubusercontent.com/Spearfield/Godot-Engine---Shooter/master/Screenshot.png)
 
 * The space ship shoots unlimeted bullets (one per klick). The bullet instances.
 * You point where you want to shoot at and the space ship angle is set and it rotates.
