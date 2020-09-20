@@ -34,7 +34,7 @@ collision_mask = 5
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -2.32471, -5.54787 )
+position = Vector2( 0.408231, -10.8035 )
 shape = SubResource( 1 )
 __meta__ = {
 "_edit_lock_": true
@@ -66,7 +66,7 @@ __meta__ = {
 }
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-position = Vector2( -1.08716, 29.4489 )
+position = Vector2( -0.036043, 30.5 )
 amount = 64
 emission_shape = 1
 emission_sphere_radius = 3.75
@@ -76,4 +76,7 @@ angle = 123.9
 angle_random = 1.0
 scale_amount = 4.0
 color_ramp = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 [connection signal="area_entered" from="." to="." method="_on_Enemy_area_entered"]

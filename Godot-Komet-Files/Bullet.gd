@@ -10,12 +10,12 @@ func setDirection(direction):
 	self.direction = direction
 
 func _process(delta):
-	# Make the glowsprite modulate the alpha (opacity) property to make it "blink" a little.
+	# Make the glowsprite modulate the alpha (opacity) property to make it "pulse" a little.
 	$Glow.modulate.a = sin(a)
 	a += MODULATE_ANIMATION_SPEED
 	# Make it move.
 	position += SPEED*delta*direction
 	# Check if the bullet is outside the screen, then kill it.
 	if not get_node("VisibilityNotifier2D").is_on_screen():
-		print("Bullet exited screen")
+#		print("Bullet exited screen")
 		queue_free() # Destroy the bullet and remove it from memory.

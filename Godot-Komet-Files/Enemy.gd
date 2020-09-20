@@ -9,6 +9,8 @@ var rng = RandomNumberGenerator.new()
 func _ready():
 	rng.randomize() # Randomize so we don't get the same random number every time we start the game.
 	a = rng.randf_range(0,100) # Randomize where in the cycle of the going up and down.
+	$TextureProgress.min_value = 0
+	$TextureProgress.max_value = EnemyStrength
 	
 func _process(delta):
 	# A sine wave makes the enemy ship go up and down
