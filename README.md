@@ -8,5 +8,5 @@ A project I made for beginners to discover a few basic things about the fantasti
 * The player is stationary.
 
 This is for the absolute beginner programmer in Godot.
-GDScript is the language used and Godot Version 3.2.2 is used.
+GDScript is the language used and Godot Version 3.2.3 is used.
 You are free to use whatever you want from this project in your project.
