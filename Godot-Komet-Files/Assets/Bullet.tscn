@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Bullet.gd" type="Script" id=1]
+[ext_resource path="res://Graphics/Glow.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/Pixelbullet.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1.57869, 1.68571 )
+
+[node name="Bullet" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.262779, 0.262779 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BulletSprite" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+scale = Vector2( 0.218888, 0.229092 )
+
+[node name="Glow" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.172549 )
+position = Vector2( 0, 0.10511 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
